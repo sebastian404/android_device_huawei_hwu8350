@@ -15,13 +15,15 @@ else
 endif
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+    $(LOCAL_KERNEL):kernel\
+    device/huawei/hwu8350/recovery/fstab:/root/etc/fstab
 
 $(call inherit-product, build/target/product/full.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := generic_hwu8350
 PRODUCT_DEVICE := hwu8350
+PRODUCT_BRAND := huawei
 
 pathmap_INCL := recovery:device/huawei/hwu8350/recovery
 
